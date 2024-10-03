@@ -4,70 +4,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <title>NFS-e Generator</title>
 </head>
 <body>
     <header class="header">
         <h1 class="header_title">NFS-e Generator</h1>
     </header>
-    <section>
-        <h2>Preencha os campos para a emissão da nota fiscal de serviço.</h2>
+    <section class="form_section">
+        <h2 class="form_title">Preencha os campos para a emissão da nota fiscal de serviço:</h2>
 
         <form class="form" action="/enviar-formulario" method="post">
 
+            <div class="column">
             <!--Dados do tomador de serviços-->
+            <div class="form_group">
+                <label class="form_label" for="nome">Nome:</label>
+                <input class="form_input" type="text" id="nome" name="nome" required><br><br>
+            </div>
 
-            <label class="form_label" for="nome">Nome:</label>
-            <input class="form_input" type="text" id="nome" name="nome" required><br><br>
+            <div class="form_group">
+                <label class="form_label" for="cpf"> CPF:</label>
+                <input class="form_input" type="text" id="cpf" name="cpf" required> <br><br>
+            </div>
 
-            <label class="form_label" for="cpf"> CPF:</label>
-            <input class="form_input" type="text" id="cpf" name="cpf" required> <br><br>
+            <div class="form_group">
+                <label class="form_label" for="endereco"> Endereço:</label>
+                <input class="form_input" type="text" id="endereco" name="endereco" required> <br><br>
+            </div>
 
-            <label class="form_label" for="endereco"> Endereço:</label>
-            <input class="form_input" type="text" id="endereco" name="endereco" required> <br><br>
+            <div class="form_group">
+                <label class="form_label" for="telefone"> Telefone:</label>
+                <input class="form_input" type="tel" id="telefone" name="telefone" required> <br><br>
+            </div>
 
-            <label class="form_label" for="telefone"> Telefone:</label>
-            <input class="form_input" type="tel" id="telefone" name="telefone" required> <br><br>
+            <div class="form_group">
+                <label class="form_label" for="municipio"> Município:</label>
+                <input class="form_input" type="text" id="municipio" name="municipio" required> <br><br>
+            </div>
 
-            <label class="form_label" for="municipio"> Município:</label>
-            <input class="form_input" type="text" id="municipio" name="municipio" required> <br><br>
+            <div class="form_group">
+                <label class="form_label" for="uf"> UF:</label>
+                <input class="form_input" type="text" id="uf" name="uf" required> <br><br>
+            </div>
 
-            <label class="form_label" for="uf"> UF:</label>
-            <input class="form_input" type="text" id="uf" name="uf" required> <br><br>
+            <div class="form_group">
+                <label class="form_label" for="email"> Email:</label>
+                <input class="form_input" type="email" id="email" name="email" required> <br><br>
+            </div>
 
-            <label class="form_label" for="email"> Email:</label>
-            <input class="form_input" type="email" id="email" name="email" required> <br><br>
+            
+        </div>      
+            
+        <div class="column">
 
             <!--Dados do serviço-->
 
-            <label class="form_label" for="descricao">Descrição do serviço:</label>
-            <input class="form_input" type="text" id="descricao" name="descricao" required><br><br>
+            <div class="form_group">
+                <label class="form_label" for="descricao">Descrição do serviço:</label>
+                <input class="form_input" type="text" id="descricao" name="descricao" required><br><br>
+            </div>
 
-            <label class="form_label" for="valor">Valor do serviço:</label>
-            <input class="form_input" type="text" id="valor" name="valor" required><br><br>
+            <div class="form_group">
+                <label class="form_label" for="valor">Valor do serviço:</label>
+                <input class="form_input" type="text" id="valor" name="valor" required><br><br>
+            </div>
 
             <!--Impostos-->
+            <div class="form_group">
+                <label class="form_label" for="irpf">Porcentagem IRPF:</label>
+                <input class="form_input" type="text" id="irpf" name="irpf" required><br><br>
+            </div>
 
-            <label class="form_label" for="irpf">Porcentagem IRPF:</label>
-            <input class="form_input" type="text" id="irpf" name="irpf" required><br><br>
+            <div class="form_group">
+                <label class="form_label" for="pis">Porcentagem PIS:</label>
+                <input class="form_input" type="text" id="pis" name="pis" required><br><br>
+            </div>
 
-            <label class="form_label" for="pis">Porcentagem PIS:</label>
-            <input class="form_input" type="text" id="pis" name="pis" required><br><br>
+            <div class="form_group">
+                <label class="form_label" for="cofins">Porcentagem COFINS:</label>
+                <input class="form_input" type="text" id="cofins" name="cofins" required><br><br>
+            </div>
 
-            <label class="form_label" for="cofins">Porcentagem COFINS:</label>
-            <input class="form_input" type="text" id="cofins" name="cofins" required><br><br>
+            <div class="form_group">
+                <label class="form_label" for="inss">Porcentagem INSS:</label>
+                <input class="form_input" type="text" id="inss" name="inss" required><br><br>
+            </div>
 
-            <label class="form_label" for="inss">Porcentagem INSS:</label>
-            <input class="form_input" type="text" id="inss" name="inss" required><br><br>
-
-            <label class="form_label" for="issqn">Porcentagem ISSQN:</label>
-            <input class="form_input" type="text" id="issqn" name="issqn" required><br><br>
-
+            <div class="form_group">
+                <label class="form_label" for="issqn">Porcentagem ISSQN:</label>
+                <input class="form_input" type="text" id="issqn" name="issqn" required><br><br>
+            </div>
 
             <!--Envio do formulário-->
-            <input type="submit" value="Emitir NFS-e">
+            <input class="submit_button" type="submit" value="Emitir NFS-e">
 
+
+        </div>
+
+            
         </form>
+
+
     </section>
 
     <Footer class="footer">
