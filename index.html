@@ -16,7 +16,7 @@
     <section class="form_section">
         <h2 class="form_title">Preencha os campos para a emissão da nota fiscal de serviço:</h2>
 
-        <form class="form" action="/enviar-formulario" method="post">
+        <form id="nfseForm" class="form" action="/enviar-formulario" method="post">
 
             <div class="column">
             <!--Dados do tomador de serviços-->
@@ -37,7 +37,7 @@
 
             <div class="form_group">
                 <label class="form_label" for="telefone"> Telefone:</label>
-                <input class="form_input" type="tel" id="telefone" name="telefone" required> <br><br>
+                <input class="form_input" type="text" id="telefone" name="telefone" required> <br><br>
             </div>
 
             <div class="form_group">
@@ -101,20 +101,15 @@
             <!--Envio do formulário-->
             <input class="submit_button" id="submit" type="submit" value="Emitir NFS-e">
 
-
-        </div>
-
-            
+        </div>          
         </form>
-
-
     </section>
 
     <Footer class="footer">
         <p>Desenvolvido por Natan Vieira</p>
     </Footer>
     
-    <script src="/script.js"></script>
-    
+    <script src="/scripts/script.js"></script>
+
 </body>
 </html>

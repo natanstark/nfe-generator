@@ -31,7 +31,12 @@
     justify-content: space-around;
 }
 
-#submit_id,
+#submit_id, 
+#submit_valor,
 #submit_descricao{
     text-align: center;
+}
+
+.data_group{
+    width: 15em;
 }
