@@ -1,13 +1,9 @@
 
 // Capturando o formulário e o contêiner de saída
 const form = document.getElementById('form');
-const outputContainer = document.getElementById('output');
-const outputName = document.getElementById('outputName');
-const outputEmail = document.getElementById('outputEmail');
-const outputPhone = document.getElementById('outputPhone');
 
 // Adicionando o evento de submit ao formulário
-form.addEventListener ('submit', function(event)) {
+document.getElementById('submit').addEventListener('click', function (){
   // Prevenir o comportamento padrão de recarregar a página
   event.preventDefault();
 
@@ -27,14 +23,8 @@ form.addEventListener ('submit', function(event)) {
   const inss = document.getElementById('inss').value;
   const issqn = document.getElementById('issqn').value;
 
-  // Exibindo os valores capturados na nova "página"
-  outputName.textContent = name;
-  outputEmail.textContent = email;
-  outputPhone.textContent = phone;
-
-  // Mostrando a nova página com os dados
-  outputContainer.style.display = 'block';
+  fetch('submit.html')
 
   // Opcional: esconder o formulário original
   form.style.display = 'none'; 
-}
+})
